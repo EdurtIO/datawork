@@ -1,0 +1,19 @@
+[package]
+name = "datawork"
+version = "1.0.0"
+description = "datawork is an efficient application editor"
+authors = ["qianmoq"]
+license = "Apache"
+repository = "https://github.com/EdurtIO/datawork.git"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.2", features = [] }
+
+[dependencies]
+tauri = { version = "1.2", features = ["shell-open"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
